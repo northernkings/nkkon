@@ -8,7 +8,7 @@ import HomePageAccommodation from "./HomePageAccommodation.vue";
 import HomePageSchedule from "./HomePageSchedule.vue";
 import HomePageVenue from "./HomePageVenue.vue";
 import HomePageConclusion from "./HomePageConclusion.vue";
-import HomePageHobby from "./HomePageHobby.vue";
+// import HomePageHobby from "./HomePageHobby.vue";
 import LayoutBase from "~/layouts/LayoutBase";
 </script>
 

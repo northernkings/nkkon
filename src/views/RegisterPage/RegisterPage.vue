@@ -29,7 +29,7 @@ defineProps({
       <Separator :compact="true" />
       <form
         action="/register-step-2/"
-        name="nkKRegistration2023"
+        name="nkkRegistration2023"
         method="POST"
         netlify-honeypot="bot-field"
         data-netlify-recaptcha="true"
