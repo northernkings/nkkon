@@ -17,7 +17,7 @@ import LayoutBase from "~/layouts/LayoutBase";
     <TitleBanner title="A weekend 'konvention' of Mantic games from the Northern Kings." />
     <HomePageOverview />
     <HomePageInformation />
-    <HomePageHobby />
+    <!-- <HomePageHobby /> -->
     <HomePageSchedule />
     <Separator />
     <HomePageVenue />
