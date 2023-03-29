@@ -1,0 +1,45 @@
+.u-list {
+  &-unstyled {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &-inline {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: var(--grid-gap);
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &-logos {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: var(--grid-gap);
+    flex-direction: column;
+
+    @media (--mq-md) {
+      flex-direction: row;
+    }
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

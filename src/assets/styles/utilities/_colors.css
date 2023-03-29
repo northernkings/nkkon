@@ -1,0 +1,12 @@
+.u-bg {
+  /* &-unilever-blue {
+    background: var(--color-brand-unilever-blue);
+  } */
+}
+
+.u-color {
+  &-black {
+    color: var(--color-black);
+  }
+}
+
