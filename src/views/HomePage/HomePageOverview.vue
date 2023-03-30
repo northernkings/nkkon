@@ -5,7 +5,7 @@
     </p>
     <p>
       A weekend event, held over two and a half days (24th
-      and 26th Novemeber 2023) at The Ossett War Memorial Community Centre, Wakefield.
+      to 26th Novemeber 2023) at The Ossett War Memorial Community Centre, Wakefield.
     </p>
     <p>
       <strong>More details to follow, but early registration is now open</strong>. Tickets are
