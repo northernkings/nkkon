@@ -84,7 +84,7 @@ const formValues = reactive({
           <small>
             Note: these selections <strong>do not</strong> lock the attendee into any individual
             event. Changes can be made at any point by getting in touch withe event organisers.
-            Though, giving us indicative numbers helps with our organisation.
+            Though, giving us indicative numbers does help with our organisation.
           </small>
         </p>
 
@@ -218,20 +218,31 @@ small {
 input[type="text"],
 input[type="email"],
 select {
+  appearance: none;
   display: block;
   width: 100%;
   margin-top: var(--space-x-2);
   padding: var(--space-y-3) var(--space-x-3);
   border-radius: 0;
   border: 2px solid var(--color-brand-fuscous);
+  position: relative;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
-option:disabled {
-  color: #777
+select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - var(--space-x-1));
+  background-position-y: 50%;
+}
+
+select option:disabled {
+  color: var(--color-mid-grey);
 }
 
 ::placeholder {
-  color: #777;
+  color: var(--color-mid-grey);
 }
 
 fieldset {
