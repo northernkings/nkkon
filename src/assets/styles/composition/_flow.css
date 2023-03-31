@@ -21,3 +21,11 @@
     margin-top: var(--space-y-4);
   }
 }
+
+.l-flow-fat > * + * {
+  margin-top: var(--space-y-5);
+
+  @media (--mq-md) {
+    margin-top: var(--space-y-7);
+  }
+}

@@ -3,9 +3,20 @@ import EditorialSection from "~/components/EditorialSection";
 import VButton from "~/components/VButton";
 import LayoutBase from "~/layouts/LayoutBase";
 import Separator from "~/components/Separator";
+import { reactive } from "vue";
 
 defineProps({
   step: Number,
+});
+
+const formValues = reactive({
+  name: "",
+  email: "",
+  fridayEvening: "",
+  saturday: "",
+  saturdayEvening: "",
+  sunday: "",
+  kowDoublesPartner: "",
 });
 </script>
 
@@ -23,8 +34,8 @@ defineProps({
         each player individually.
       </p>
       <p>
-        Tickets are priced at <strong>&pound;55</strong>, include a proper lunch on both days and a planned evening
-        social.
+        Tickets are priced at <strong>&pound;55</strong>, include a proper lunch on both days and a
+        planned evening social.
       </p>
       <Separator :compact="true" />
       <form
@@ -34,7 +45,7 @@ defineProps({
         netlify-honeypot="bot-field"
         data-netlify-recaptcha="true"
         data-netlify="true"
-        class="c-form"
+        class="c-form l-flow-fat"
       >
         <div class="u-hidden">
           <label for="bot-field">Ignore this field if you are human</label>
@@ -42,6 +53,8 @@ defineProps({
           <input type="hidden" name="subject" value="Northern KING KON 2023 - Registration" />
           <input type="hidden" name="form-name" value="nkkRegistration2023" />
         </div>
+
+        <h3>Attendee details</h3>
 
         <div class="c-form__group">
           <label for="name">Attendee's Full Name</label>
@@ -52,8 +65,7 @@ defineProps({
           <label for="email">Contact Email</label>
           <p>
             <small>
-              Note: we will only use your email address to communicate with you about about the
-              event.
+              Note: we will only use this email address to communicate about the event.
             </small>
           </p>
           <input
@@ -63,6 +75,200 @@ defineProps({
             required
             placeholder="e.g. ronnie@example.com"
           />
+        </div>
+
+        <h3>Please select individual events</h3>
+        <p>
+          <small>
+            Note: these selections <strong>do not</strong> lock the attendee into any individual
+            event. Changes can be made at any point by getting in touch withe event organisers.
+            Though, giving us indicative numbers helps with our organisation.
+          </small>
+        </p>
+
+        <div class="c-form__group l-flow">
+          <h4>fridayEvening (Evening)</h4>
+          <div class="c-form__group l-flow-slim">
+            <label for="fridayEveningFirefight">
+              <input
+                id="fridayEveningFirefight"
+                name="fridayEvening"
+                type="radio"
+                value="Firefight (500 points)"
+                required
+                v-model="formValues.fridayEvening"
+              />
+              Firefight (500 points)
+            </label>
+            <label for="fridayEveningKowAmbush">
+              <input
+                id="fridayEveningKowAmbush"
+                name="fridayEvening"
+                type="radio"
+                value="Kings of War Ambush (800 points)"
+                required
+                v-model="formValues.fridayEvening"
+              />
+              Kings of War Ambush (800 points)
+            </label>
+            <label for="fridayEveningOpen">
+              <input
+                id="fridayEveningOpen"
+                name="fridayEvening"
+                type="radio"
+                value="Open Gaming"
+                required
+                v-model="formValues.fridayEvening"
+              />
+              Open Gaming (e.g. board games, practice games etc.)
+            </label>
+            <label for="fridayEveningNone">
+              <input
+                id="fridayEveningNone"
+                name="fridayEvening"
+                type="radio"
+                value="None/Unsure"
+                required
+                v-model="formValues.fridayEvening"
+              />
+              None/Unsure
+            </label>
+          </div>
+
+          <h4>Saturday (Day)</h4>
+          <div class="c-form__group l-flow-slim">
+            <label for="saturdayFirefight">
+              <input
+                id="saturdayFirefight"
+                name="saturday"
+                type="radio"
+                value="Firefight Singles (1500 points)"
+                required
+                v-model="formValues.saturday"
+              />
+              Firefight Singles (1500 points)
+            </label>
+            <label for="saturdayKow">
+              <input
+                id="saturdayKow"
+                name="saturday"
+                type="radio"
+                value="Kings of War Singles (2300 points)"
+                required
+                v-model="formValues.saturday"
+              />
+              Kings of War Singles (2300 points)
+            </label>
+            <label for="saturdayNone">
+              <input
+                id="saturdayNone"
+                name="saturday"
+                type="radio"
+                value="None/Unsure"
+                required
+                v-model="formValues.saturday"
+              />
+              None/Unsure
+            </label>
+          </div>
+
+          <h4>Saturday (Evening)</h4>
+          <div class="c-form__group l-flow-slim">
+            <label for="saturdayEveningFirefight">
+              <input
+                id="saturdayEveningFirefight"
+                name="saturdayEvening"
+                type="radio"
+                value="Firefight Big Tank Battle"
+                required
+                v-model="formValues.saturdayEvening"
+              />
+              Firefight "Big Tank Battle"
+            </label>
+            <label for="saturdayEveningOpen">
+              <input
+                id="saturdayEveningOpen"
+                name="saturdayEvening"
+                type="radio"
+                value="Open Gaming"
+                required
+                v-model="formValues.saturdayEvening"
+              />
+              Open Gaming (e.g. board games, practice games etc.)
+            </label>
+            <label for="saturdayEveningNone">
+              <input
+                id="saturdayEveningNone"
+                name="saturdayEvening"
+                type="radio"
+                value="None/Unsure"
+                required
+                v-model="formValues.saturdayEvening"
+              />
+              None/Unsure
+            </label>
+          </div>
+
+          <h4>Sunday (Day)</h4>
+          <div class="c-form__group l-flow-slim">
+            <p>
+              <small>
+                Note: you do not need to decide on a partner to register for the Kings of War
+                Doubles. We will find you a partner if nessessary.
+              </small>
+            </p>
+            <label for="sundayKow">
+              <input
+                id="sundayKow"
+                name="sunday"
+                type="radio"
+                value="Kings of War Doubles"
+                v-model="formValues.sunday"
+              />
+              Kings of War Doubles
+            </label>
+            <label for="sundayDeadzone">
+              <input
+                id="sundayDeadzone"
+                name="sunday"
+                type="radio"
+                value="Deadzone"
+                v-model="formValues.sunday"
+              />
+              Deadzone
+            </label>
+            <label for="sundayArmada">
+              <input
+                id="sundayArmada"
+                name="sunday"
+                type="radio"
+                value="Armada"
+                v-model="formValues.sunday"
+              />
+              Armada
+            </label>
+            <label for="sundayNone">
+              <input
+                id="sundayNone"
+                name="sunday"
+                type="radio"
+                value="None/Unsure"
+                v-model="formValues.sunday"
+              />
+              None/Unsure
+            </label>
+            <div class="c-form__group" v-if="formValues.sunday === 'Kings of War Doubles'">
+              <label for="kowDoublesPartner">Kings of War doubles partner name (Optional)</label>
+              <input
+                id="kowDoublesPartner"
+                name="kowDoublesPartner"
+                type="text"
+                required
+                placeholder="e.g. Nick Williams"
+                v-model="formValues.kowDoublesPartner"
+              />
+            </div>
+          </div>
         </div>
 
         <div class="c-form__group" data-netlify-recaptcha="true"></div>
@@ -120,9 +326,5 @@ input[type="email"] {
   padding: var(--space-y-3) var(--space-x-3);
   border-radius: 0;
   border: 2px solid var(--color-brand-fuscous);
-}
-
-.c-form__group {
-  margin-bottom: var(--space-x-6);
 }
 </style>
