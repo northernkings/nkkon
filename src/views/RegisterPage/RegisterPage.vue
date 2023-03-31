@@ -227,6 +227,14 @@ select {
   border: 2px solid var(--color-brand-fuscous);
 }
 
+option:disabled {
+  color: #777
+}
+
+::placeholder {
+  color: #777;
+}
+
 fieldset {
   all: unset;
   padding: 0;
