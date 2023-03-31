@@ -160,7 +160,6 @@ const formValues = reactive({
                 id="kowDoublesPartner"
                 name="kowDoublesPartner"
                 type="text"
-                required
                 placeholder="e.g. Nick Williams"
                 v-model="formValues.kowDoublesPartner"
               />
