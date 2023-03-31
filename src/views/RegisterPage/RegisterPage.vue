@@ -34,7 +34,8 @@ const formValues = reactive({
         each player individually.
       </p>
       <p>
-        Tickets are priced at <strong>&pound;55</strong>, include a proper lunch on Saturday and Sunday.
+        Tickets are priced at <strong>&pound;55</strong>, include a proper lunch on Saturday and
+        Sunday.
       </p>
 
       <Separator :compact="true" />
@@ -88,177 +89,72 @@ const formValues = reactive({
         </p>
 
         <div class="c-form__group l-flow">
-          <h4>Friday (Evening)</h4>
-          <div class="c-form__group l-flow-slim">
-            <label for="fridayEveningFirefight">
-              <input
-                id="fridayEveningFirefight"
-                name="fridayEvening"
-                type="radio"
-                value="Firefight (500 points)"
-                required
-                v-model="formValues.fridayEvening"
-              />
-              Firefight (500 points)
-            </label>
-            <label for="fridayEveningKowAmbush">
-              <input
-                id="fridayEveningKowAmbush"
-                name="fridayEvening"
-                type="radio"
-                value="Kings of War Ambush (800 points)"
-                required
-                v-model="formValues.fridayEvening"
-              />
-              Kings of War Ambush (800 points)
-            </label>
-            <label for="fridayEveningOpen">
-              <input
-                id="fridayEveningOpen"
-                name="fridayEvening"
-                type="radio"
-                value="Open Gaming"
-                required
-                v-model="formValues.fridayEvening"
-              />
-              Open Gaming (e.g. board games, practice games etc.)
-            </label>
-            <label for="fridayEveningNone">
-              <input
-                id="fridayEveningNone"
-                name="fridayEvening"
-                type="radio"
-                value="None/Unsure"
-                required
-                v-model="formValues.fridayEvening"
-              />
-              None/Unsure
-            </label>
+          <div class="c-form__group">
+            <label for="fridayEvening">Friday (Evening)</label>
+            <select
+              id="fridayEvening"
+              name="fridayEvening"
+              required
+              v-model="formValues.fridayEvening"
+            >
+              <option value="" disabled selected>Select an option</option>
+              <option value="Firefight (500 points)">Firefight (500 points)</option>
+              <option value="Kings of War Ambush (800 points)">
+                Kings of War Ambush (800 points)
+              </option>
+              <option value="Open Gaming">
+                Open Gaming (e.g. board games, practice games etc.)
+              </option>
+              <option value="None/Unsure">None/Unsure</option>
+            </select>
           </div>
-
-          <h4>Saturday (Day)</h4>
-          <div class="c-form__group l-flow-slim">
-            <label for="saturdayFirefight">
-              <input
-                id="saturdayFirefight"
-                name="saturday"
-                type="radio"
-                value="Firefight Singles (1500 points)"
-                required
-                v-model="formValues.saturday"
-              />
-              Firefight Singles (1500 points)
-            </label>
-            <label for="saturdayKow">
-              <input
-                id="saturdayKow"
-                name="saturday"
-                type="radio"
-                value="Kings of War Singles (2300 points)"
-                required
-                v-model="formValues.saturday"
-              />
-              Kings of War Singles (2300 points)
-            </label>
-            <label for="saturdayNone">
-              <input
-                id="saturdayNone"
-                name="saturday"
-                type="radio"
-                value="None/Unsure"
-                required
-                v-model="formValues.saturday"
-              />
-              None/Unsure
-            </label>
+          <div class="c-form__group">
+            <label for="saturdayDay">Saturday (Day)</label>
+            <select id="saturdayDay" name="saturdayDay" required v-model="formValues.saturday">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Firefight Singles (1500 points)">
+                Firefight Singles (1500 points)
+              </option>
+              <option value="Kings of War Singles (2300 points)">
+                Kings of War Singles (2300 points)
+              </option>
+              <option value="None/Unsure">None/Unsure</option>
+            </select>
           </div>
-
-          <h4>Saturday (Evening)</h4>
-          <div class="c-form__group l-flow-slim">
-            <label for="saturdayEveningFirefight">
-              <input
-                id="saturdayEveningFirefight"
-                name="saturdayEvening"
-                type="radio"
-                value="Firefight Big Tank Battle"
-                required
-                v-model="formValues.saturdayEvening"
-              />
-              Firefight "Big Tank Battle"
-            </label>
-            <label for="saturdayEveningOpen">
-              <input
-                id="saturdayEveningOpen"
-                name="saturdayEvening"
-                type="radio"
-                value="Open Gaming"
-                required
-                v-model="formValues.saturdayEvening"
-              />
-              Open Gaming (e.g. board games, practice games etc.)
-            </label>
-            <label for="saturdayEveningNone">
-              <input
-                id="saturdayEveningNone"
-                name="saturdayEvening"
-                type="radio"
-                value="None/Unsure"
-                required
-                v-model="formValues.saturdayEvening"
-              />
-              None/Unsure
-            </label>
+          <div class="c-form__group">
+            <label for="saturdayEvening">Saturday (Evening)</label>
+            <select
+              id="saturdayEvening"
+              name="saturdayEvening"
+              required
+              v-model="formValues.saturdayEvening"
+            >
+              <option value="" disabled selected>Select an option</option>
+              <option value="Firefight Big Tank Battle">Firefight "Big Tank Battle"</option>
+              <option value="Open Gaming">
+                Open Gaming (e.g. board games, practice games etc.)
+              </option>
+              <option value="None/Unsure">None/Unsure</option>
+            </select>
           </div>
-
-          <h4>Sunday (Day)</h4>
-          <div class="c-form__group l-flow-slim">
-            <p>
-              <small>
-                Note: you do not need to decide on a partner to register for the Kings of War
-                Doubles. We will find you a partner if nessessary.
-              </small>
-            </p>
-            <label for="sundayKow">
-              <input
-                id="sundayKow"
-                name="sunday"
-                type="radio"
-                value="Kings of War Doubles"
-                v-model="formValues.sunday"
-              />
-              Kings of War Doubles
-            </label>
-            <label for="sundayDeadzone">
-              <input
-                id="sundayDeadzone"
-                name="sunday"
-                type="radio"
-                value="Deadzone"
-                v-model="formValues.sunday"
-              />
-              Deadzone
-            </label>
-            <label for="sundayArmada">
-              <input
-                id="sundayArmada"
-                name="sunday"
-                type="radio"
-                value="Armada"
-                v-model="formValues.sunday"
-              />
-              Armada
-            </label>
-            <label for="sundayNone">
-              <input
-                id="sundayNone"
-                name="sunday"
-                type="radio"
-                value="None/Unsure"
-                v-model="formValues.sunday"
-              />
-              None/Unsure
-            </label>
-            <div class="c-form__group" v-if="formValues.sunday === 'Kings of War Doubles'">
+          <div class="l-flow">
+            <div class="c-form__group">
+              <label for="sundayDay">Sunday (Day)</label>
+              <p>
+                <small>
+                  Note: you do not need to decide on a partner to register for the Kings of War
+                  Doubles. We will find you a partner if nessessary.
+                </small>
+              </p>
+              <select id="sundayDay" name="sundayDay" required v-model="formValues.sunday">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Kings of War Doubles">Kings of War Doubles</option>
+                <option value="Deadzone">Deadzone</option>
+                <option value="Armada">Armada</option>
+                <option value="None/Unsure">None/Unsure</option>
+              </select>
+            </div>
+            <div class="c-form__group" v-show="formValues.sunday === 'Kings of War Doubles'">
               <label for="kowDoublesPartner">Kings of War doubles partner name (Optional)</label>
               <input
                 id="kowDoublesPartner"
@@ -321,11 +217,24 @@ small {
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+select {
+  display: block;
   width: 100%;
   margin-top: var(--space-x-2);
   padding: var(--space-y-3) var(--space-x-3);
   border-radius: 0;
   border: 2px solid var(--color-brand-fuscous);
+}
+
+fieldset {
+  all: unset;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+
+fieldset > legend + * {
+  padding-top: var(--space-y-3);
 }
 </style>

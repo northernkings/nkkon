@@ -1,6 +1,7 @@
 /* Headings */
 
-h1 {
+h1,
+.u-heading-1 {
   font-size: var(--font-size-2);
 
   @media (--mq-md) {
@@ -8,7 +9,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.u-heading-2 {
   font-size: var(--font-size-3);
 
   @media (--mq-md) {
@@ -16,7 +18,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.u-heading-3 {
   font-size: var(--font-size-4);
 
   @media (--mq-md) {
@@ -24,7 +27,8 @@ h3 {
   }
 }
 
-h4 {
+h4,
+.u-heading-4 {
   font-size: var(--font-size-5);
 
   @media (--mq-md) {
@@ -32,7 +36,8 @@ h4 {
   }
 }
 
-h5 {
+h5,
+.u-heading-5 {
   font-size: var(--font-size-6);
 
   @media (--mq-md) {
@@ -40,7 +45,8 @@ h5 {
   }
 }
 
-h6 {
+h6,
+.u-heading-6 {
   font-size: var(--font-size-7);
 
   @media (--mq-md) {
@@ -53,7 +59,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+[class^="u-heading-"] {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-heading);
