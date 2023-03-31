@@ -8,7 +8,7 @@ import HomePageAccommodation from "./HomePageAccommodation.vue";
 import HomePageSchedule from "./HomePageSchedule.vue";
 import HomePageVenue from "./HomePageVenue.vue";
 import HomePageConclusion from "./HomePageConclusion.vue";
-// import HomePageHobby from "./HomePageHobby.vue";
+import HomePageTickets from "./HomePageTickets.vue";
 import LayoutBase from "~/layouts/LayoutBase";
 </script>
 
@@ -17,8 +17,9 @@ import LayoutBase from "~/layouts/LayoutBase";
     <TitleBanner title="A weekend 'konvention' of Mantic games from the Northern Kings." />
     <HomePageOverview />
     <HomePageInformation />
+     <HomePageTickets />
     <!-- <HomePageHobby /> -->
-    <HomePageSchedule />
+    <!-- <HomePageSchedule /> -->
     <Separator />
     <HomePageVenue />
     <HomePageAccommodation />

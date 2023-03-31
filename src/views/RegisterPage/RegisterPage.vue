@@ -34,10 +34,11 @@ const formValues = reactive({
         each player individually.
       </p>
       <p>
-        Tickets are priced at <strong>&pound;55</strong>, include a proper lunch on both days and a
-        planned evening social.
+        Tickets are priced at <strong>&pound;55</strong>, include a proper lunch on Saturday and Sunday.
       </p>
+
       <Separator :compact="true" />
+
       <form
         action="/register-step-2/"
         name="nkkRegistration2023"
@@ -87,7 +88,7 @@ const formValues = reactive({
         </p>
 
         <div class="c-form__group l-flow">
-          <h4>fridayEvening (Evening)</h4>
+          <h4>Friday (Evening)</h4>
           <div class="c-form__group l-flow-slim">
             <label for="fridayEveningFirefight">
               <input
