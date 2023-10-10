@@ -19,12 +19,12 @@
       <li><strong>Armada</strong> - 9am to 6pm, Details tbc</li>
     </ul>
 
-    <!-- <VButton href="/files/NKGT-2023_EventPack_v1.0.pdf" :variants="['decorative']">
+    <VButton href="https://drive.google.com/drive/folders/1RHEkitRXmx01A2iFRqZFQoMGySQxD5Jk" :variants="['decorative']">
       <template v-slot:icon>
         <IconDownload />
       </template>
-      Download the event pack for full details
-    </VButton> -->
+      View all the event packs for full details on each event
+    </VButton>
 
     <!-- <p><strong>Event Pack to follow.</strong></p> -->
 
